@@ -5,7 +5,7 @@
 	<title>Ejercicio 03</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
 <body>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<nav class="navbar">
 		<ul>
 			<li><a href="#">link 1</a></li>
@@ -21,6 +21,10 @@
 			<li><a href="#">link 9</a></li>
 		</ul>
 	</nav>
+	<script>
+	$("li:nth-of-type(4)").append('<ul><li><a href="#">link 4.a</a></li></ul>').before('<li><a href="#">link 3.5</a></li>');
+	$("li:contains('6')").prepend('😎');
+	</script>
 
 </body>
 </html>

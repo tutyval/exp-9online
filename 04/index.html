@@ -9,5 +9,19 @@
   <button class="add_name">+</button>
   <ul class="names"></ul>
 
+  <script src="../_assets/js/jquery-3.3.1.min.js"></script>
+<script>
+	$(".add_name").on("click", function(event){
+		var data = prompt("cuenta tus alegrias");
+		$(".names").append("<li><span>"+ data +"</span> <a href="#" class="borrar">X</a></li>");
+	});
+	$(".names").on("click","a[href="#"]", function(event){
+		event.preventDefault();
+	});
+	$(".names").on("click", ".borrar", function(event){
+		$(this).parent().remove();
+	});
+</script>
 </body>
 </html>
+
